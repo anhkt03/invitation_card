@@ -1,0 +1,62 @@
+@import "tailwindcss";
+
+:root {
+  --background: #f5f7fa;
+  --foreground: #26303f;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-be-vietnam);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-be-vietnam), system-ui, sans-serif;
+}
+
+.tpl-heading {
+  font-family: var(--tpl-font-heading, serif), serif;
+}
+
+.tpl-script {
+  font-family: var(--tpl-font-script, cursive), cursive;
+}
+
+.tpl-body {
+  font-family: var(--tpl-font-body, var(--font-be-vietnam)), system-ui, sans-serif;
+  --text-xs: calc(0.75rem * var(--tpl-scale, 1));
+  --text-sm: calc(0.875rem * var(--tpl-scale, 1));
+  --text-base: calc(1rem * var(--tpl-scale, 1));
+  --text-lg: calc(1.125rem * var(--tpl-scale, 1));
+  --text-xl: calc(1.25rem * var(--tpl-scale, 1));
+  --text-2xl: calc(1.5rem * var(--tpl-scale, 1));
+  --text-3xl: calc(1.875rem * var(--tpl-scale, 1));
+  --text-4xl: calc(2.25rem * var(--tpl-scale, 1));
+  --text-5xl: calc(3rem * var(--tpl-scale, 1));
+}
+
+.petal {
+  position: absolute;
+  top: 0;
+  border-radius: 60% 40% 60% 40%;
+  will-change: transform, opacity;
+  animation-name: petal-fall;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+@keyframes petal-fall {
+  0% { transform: translate3d(0, -60px, 0) rotate(0deg); opacity: 0; }
+  6% { opacity: 0.9; }
+  25% { transform: translate3d(16px, 170px, 0) rotate(80deg); }
+  50% { transform: translate3d(-12px, 400px, 0) rotate(160deg); opacity: 0.9; }
+  75% { transform: translate3d(14px, 630px, 0) rotate(240deg); }
+  100% { transform: translate3d(-6px, 880px, 0) rotate(320deg); opacity: 0; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .petal { animation: none; display: none; }
+}
