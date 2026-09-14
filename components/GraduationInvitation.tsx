@@ -64,7 +64,7 @@ export default function GraduationInvitation({
       } as React.CSSProperties}
     >
       <div className="mx-auto w-full max-w-[480px]">
-        <CoverHero photo={data.coverPhoto} kicker="Graduation Day" title={data.graduateName} subtitle="Trân trọng kính mời tới dự lễ tốt nghiệp" dateLabel={dateLabel} particles={false} />
+        <CoverHero photo={data.coverPhoto} kicker="Graduation Day" title={data.graduateName} subtitle="Trân trọng kính mời bạn tới dự lễ tốt nghiệp" dateLabel={dateLabel} particles={false} />
         <div className="relative z-10 -mt-8 space-y-12 pb-10">
           <RevealOnScroll><OpeningLetter heading="Thư mời" body={data.openingLetter} invitation={data.invitation} /></RevealOnScroll>
           <RevealOnScroll><HostsIntro hosts={[{ label: "Tân cử nhân loại Giỏi", names: `${data.degree}\n${data.school}` }]} headline={data.graduateName} /></RevealOnScroll>

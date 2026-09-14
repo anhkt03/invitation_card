@@ -41,7 +41,7 @@ export default function CoverHero({
           {title}
         </h1>
         {subtitle && (
-          <p className="text-[13px] uppercase tracking-[0.3em] opacity-90">
+          <p className="text-[11px] uppercase tracking-[0.2em] opacity-90">
             {subtitle}
           </p>
         )}
