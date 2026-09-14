@@ -7,7 +7,7 @@ const invitation: GraduationInvitationData = {
   degree: "Ngành Kỹ thuật Phần mềm",
   school: "Trường Đại học FPT Hà Nội",
   ceremonyName: "LỄ TỐT NGHIỆP",
-  dateTime: "2026-09-16T13:00",
+  dateTime: "2026-09-16T16:00",
   eventNote: "",
   venueName: "Hội trường MMH - Trung Tâm Hội Nghị Quốc Gia",
   venueAddress: "",
